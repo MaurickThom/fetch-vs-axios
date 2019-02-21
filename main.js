@@ -47,8 +47,8 @@ const run = async () => {
 
     const ax = () => makeBencher(log('Bench Axios'), whitAxios(makeUrl(url, resource)), repeatReq)
     const ft = () => makeBencher(log('Bench Fetch'), whitFetch(makeUrl(url, resource)), repeatReq)
-    const t2 = await repeat(ft, repeatTest)
     const t1 = await repeat(ax, repeatTest)
+    const t2 = await repeat(ft, repeatTest)
 
     const t1p = getPromedy(t1.flat(1))
     const t2p = getPromedy(t2.flat(1))
