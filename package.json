@@ -1,0 +1,12 @@
+{
+  "name": "fetch-vs-axios",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "inspect": "node --inspect server"
+  },
+  "devDependencies": {
+    "@types/node": "^11.9.3"
+  }
+}
