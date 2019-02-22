@@ -13,7 +13,7 @@
             "name": "Launch Chrome --headless",
             "type": "chrome",
             "request": "launch",
-            "url": "http://localhost:3000/request.html",
+            "url": "http://localhost:3000/files/request.html",
             "webRoot": "${workspaceFolder}",
             "runtimeArgs": [
                 "--headless",
@@ -24,7 +24,7 @@
             "name": "Launch Chrome",
             "type": "chrome",
             "request": "launch",
-            "url": "http://localhost:3000/request.html",
+            "url": "http://localhost:3000/files/request.html",
             "webRoot": "${workspaceFolder}",
             "runtimeArgs": [
                 "--auto-open-devtools-for-tabs"

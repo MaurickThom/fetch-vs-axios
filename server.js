@@ -10,27 +10,27 @@ const config = {
 }
 
 const pipe = (pathname, res) => fs.createReadStream(join(__dirname, pathname)).pipe(res)
-const jsonFile = JSON.stringify(fs.readFileSync(join(__dirname, 'test.json')))
+const jsonFile = JSON.stringify(fs.readFileSync(join(__dirname, 'files/test.json')))
 
 http.createServer((req, res) => {
     // res.setHeader('Cache-Control', 'public, max-age=86400')
     const { pathname } = parse(req.url)
 
     switch (pathname) {
-        case '/test.json': {
+        case '/files/test.json': {
             // direct from memory
             res.setHeader('Content-Type', 'application/json')
             res.end(jsonFile)
             return
         }
 
-        case '/test.jpg': {
+        case '/files/test.jpg': {
             res.setHeader('Content-Type', 'image/jpeg')
             pipe(pathname, res)
             return
         }
 
-        case '/foo': {
+        case '/files/foo': {
             res.setHeader('Content-Type', 'application/json')
             res.end({
                 foo: 'foo'
