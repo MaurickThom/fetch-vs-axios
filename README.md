@@ -45,7 +45,7 @@ npm run bench
     <h1>Fetch cons</h1>
 </font>
 
-- Is it's a bit verbose, but u can use a library called [**ky**](https://github.com/sindresorhus/ky)
+- Is it's a bit verbose, but u can use a really cool library called [**ky**](https://github.com/sindresorhus/ky)
 
 <br>
 
