@@ -64,6 +64,16 @@ Percent difference: **250%** <br>
 
 <br>
 
+### Code coverage
+<h1>
+<p align="center"><img src="https://github.com/Hume3/fetch-vs-axios/blob/master/resources/code-coverage.png" width="800"></p>
+</h1>
+
+24.1% is understandable, since Axios has utilities that I have not used, generally nobody uses them hehe
+
+<br>
+
+
 ### Fetch API browser compatibility
 
 <h1>
