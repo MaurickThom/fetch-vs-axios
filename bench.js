@@ -15,17 +15,25 @@ const resources = {
     , imageLarge: 'files/image_large.jpg'
 }
 
-const main = async (resource, requests, repetitions) => {
-    const port = 3000
-    await server().listen(port)
+const port = 3000
+const openUrl = (indexFile) => `http://localhost:${port}/${indexFile}`
+
+const main = async ({
+    cache
+    , index
+    , resource
+    , requests
+    , repetitions
+}) => {
+    await server(cache).listen(port)
     const browser = await puppeteer.launch()
     const page = await browser.newPage()
 
     page.on('console', msg => console.log(msg.text()))
 
     await page.coverage.startJSCoverage()
-    await page.goto(`http://localhost:${port}/index.html`)
-    await page.evaluate((res, reqs, repts) => main(url(res), reqs, repts), resource, requests, repetitions)
+    await page.goto(openUrl(index))
+    await page.evaluate((cache, res, reqs, repts) => main(cache, url(res), reqs, repts), cache, resource, requests, repetitions)
 
     const jsCoverage = await page.coverage.stopJSCoverage()
     pti.write(jsCoverage)
@@ -33,4 +41,10 @@ const main = async (resource, requests, repetitions) => {
     process.exit()
 }
 
-main(resources.image, args['--req'], args['--rep'])
+main({
+    cache: false
+    , index: 'index.min.html'
+    , resource: resources.image
+    , requests: args['--req']
+    , repetitions: args['--rep']
+})
