@@ -10,6 +10,7 @@ const args = arg({
 
 const resources = {
     foo: 'foo'
+    , gif: 'files/giphy.gif'
     , image: 'files/image.jpg'
     , fooJson: 'files/test.json'
     , imageLarge: 'files/image_large.jpg'
@@ -25,15 +26,23 @@ const main = async ({
     , requests
     , repetitions
 }) => {
+    // start http server
     await server(cache).listen(port)
     const browser = await puppeteer.launch()
     const page = await browser.newPage()
+    const evalArgs = [cache, resource, requests, repetitions]
 
     page.on('console', msg => console.log(msg.text()))
-
+    // start coverage API
     await page.coverage.startJSCoverage()
     await page.goto(openUrl(index))
-    await page.evaluate((cache, res, reqs, repts) => main(cache, url(res), reqs, repts), cache, resource, requests, repetitions)
+    await page.evaluate((cache, res, reqs, repts) => main({
+        cache
+        , giveURL: url(res)
+        , resource: res
+        , requests: reqs
+        , repetitions: repts
+    }), ...evalArgs)
 
     const jsCoverage = await page.coverage.stopJSCoverage()
     pti.write(jsCoverage)
