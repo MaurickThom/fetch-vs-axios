@@ -30,7 +30,7 @@ npm run bench
 - Reduces javascript VM read and execution times
 - Reduces compilation times, like webpack bundles
 - Has more control of browser cache [Cache control](https://hacks.mozilla.org/2016/03/referrer-and-cache-control-apis-for-fetch/)
-- It is built in low level from scratch
+- It is built in low level from scratch [Fetch API source code](https://github.com/chromium/chromium/tree/master/third_party/blink/renderer/core/fetch)
 - It is not necessary to load it from an external source
 - It consumes less resources of server/client when, solving requests in less time
 - No extra Javascript code 
