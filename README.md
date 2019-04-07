@@ -1,5 +1,20 @@
-<img src="https://github.com/Hume3/fetch-vs-axios/blob/master/banner.png?raw=true" style="width=80%;height:auto"/>
-<h1> Fetch Native API vs Axios(XMLhttprequest) </h1>
+<center>
+<img src="https://github.com/Hume3/fetch-vs-axios/blob/master/banner.png?raw=true" width="400">
+</center>
+<br>
+
+In this repository is made a comparison of the **native Fetch API** vs latest version of the **Axios library** (XMLhttprequest). 
+
+**Procedures**
+
+## Install all depedencies
+```bash
+npm install 
+```
+## Run the tests
+```bash
+npm run bench 
+```
 
 # Chromium source code references:
 
