@@ -5,12 +5,16 @@
   "main": "server.js",
   "license": "MIT",
   "scripts": {
-    "inspect": "node --inspect server"
+    "inspect": "node --inspect server",
+    "bench": "node bench",
+    "coverage": "node_modules/.bin/nyc report --reporter=html"
   },
   "devDependencies": {
-    "@types/node": "^11.9.3"
+    "@types/node": "^11.13.0",
+    "nyc": "^13.3.0"
   },
   "dependencies": {
-    "puppeteer": "^1.14.0"
+    "puppeteer": "^1.14.0",
+    "puppeteer-to-istanbul": "^1.2.2"
   }
 }
