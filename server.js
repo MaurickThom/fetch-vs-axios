@@ -4,15 +4,13 @@ const { join } = require('path')
 // eslint-disable-next-line node/no-deprecated-api
 const { parse } = require('url')
 
-// serve in all interfaces
-const config = {
-    host: '0.0.0.0'
-    , port: 3000
-}
-
 const pipe = (pathname, res) => {
     fs.stat(join(__dirname, pathname), (err, stats) => {
-        if (err) throw err
+        if (err) {
+            res.end()
+            return
+        }
+
         res.setHeader('Content-length', stats.size)
         fs.createReadStream(join(__dirname, pathname)).pipe(res)
     })
@@ -29,7 +27,7 @@ const server = (cache = false) => {
         foo: 'foo'
     })
 
-    return http.createServer((req, res) => {
+    const server = http.createServer((req, res) => {
         cache && res.setHeader('Cache-Control', 'public, max-age=86400')
         const { pathname } = parse(req.url)
 
@@ -68,6 +66,19 @@ const server = (cache = false) => {
             }
         }
     })
+
+    return {
+        listen: (port = 3000, host = '0.0.0.0') => {
+            return new Promise((resolve, reject) => {
+                server.listen(port, host)
+                server.on('error', reject)
+                server.on('listening', () => {
+                    console.log('server listening', port)
+                    resolve()
+                })
+            })
+        }
+    }
 }
 
-server().listen(config, () => console.log('listen on port', config.port))
+module.exports = server
