@@ -8,16 +8,17 @@ const args = arg({
     , '--rep': Number
 })
 
-const resources = {
-    foo: 'foo'
-    , gif: 'files/giphy.gif'
-    , image: 'files/image.jpg'
-    , fooJson: 'files/test.json'
-    , imageLarge: 'files/image_large.jpg'
+const RESOURCES = {
+    FOO: 'foo'
+    , GIF: 'files/giphy.gif'
+    , IMAGE: 'files/image.jpg'
+    , FOO_JSON: 'files/test.json'
+    , IMAGE_LARGE: 'files/image_large.jpg'
 }
 
-const port = 3000
-const openUrl = (indexFile) => `http://localhost:${port}/${indexFile}`
+const PORT = 3000
+const URL = `http://localhost:${PORT}`
+const openUrl = (indexFile) => `${URL}/${indexFile}`
 
 const main = async ({
     cache
@@ -27,25 +28,26 @@ const main = async ({
     , repetitions
 }) => {
     // start http server
-    await server(cache).listen(port)
+    await server(cache).listen(PORT)
+
     const browser = await puppeteer.launch()
     const page = await browser.newPage()
-    const evalArgs = [cache, resource, requests, repetitions]
+    const evalArgs = [URL, cache, resource, requests, repetitions]
 
     page.on('console', msg => console.log(msg.text()))
+
     // start coverage API
     await page.coverage.startJSCoverage()
     await page.goto(openUrl(index))
-    await page.evaluate((cache, res, reqs, repts) => main({
-        cache
-        , giveURL: url(res)
-        , resource: res
+    await page.evaluate((url, cache, res, reqs, reps) => main({
+        url: makeUrl(url, res)
+        , cache
         , requests: reqs
-        , repetitions: repts
+        , repetitions: reps
     }), ...evalArgs)
 
-    const jsCoverage = await page.coverage.stopJSCoverage()
-    pti.write(jsCoverage)
+    pti.write(await page.coverage.stopJSCoverage())
+
     await browser.close()
     process.exit()
 }
@@ -53,7 +55,7 @@ const main = async ({
 main({
     cache: false
     , index: 'index.min.html'
-    , resource: resources.image
+    , resource: RESOURCES.IMAGE
     , requests: args['--req']
     , repetitions: args['--rep']
 })
