@@ -17,6 +17,23 @@ npm run bench
 ```
 <br>
 
+#### Fetch pros
+- Is **native**
+- Is **most faster**
+- Is reduces compilation times, like webpack bundles
+- Is reduces javascript VM read times
+- Is modern and the remplace of XMLhttprequest object 
+- Has more control of cache
+- It is not necessary to load it from an external source
+- It consumes less resources of server/client when, solving request in less time
+- No unused Javascript code 
+- Great handling of binary data type array buffers, blobs, etc 
+- Request can be controled by the Controller 
+- You can create and handle, Readable Streams similar to Node.js
+
+#### Fetch pros
+- Is it's a bit verbose, but u can use a library called [**ky** ](https://github.com/sindresorhus/ky)
+
 #### Benchmark demo
 
 Cache status: **false** <br>
