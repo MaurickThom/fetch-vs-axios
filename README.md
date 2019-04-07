@@ -33,8 +33,8 @@ npm run bench
 - It is built in low level from scratch
 - It is not necessary to load it from an external source
 - It consumes less resources of server/client when, solving requests in less time
-- No **0%** of unused Javascript, check nyc code coverage 
 - No extra Javascript code 
+- **0%** of unused Javascript, check nyc code coverage 
 - Great handling of binary data type array buffers, blobs, etc 
 - Request can be aborted by the AbortController [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController/abort) 
 - You can create and handle, Readable Streams similar to Node.js [Using readable streams](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams)
