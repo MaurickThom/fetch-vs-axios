@@ -35,7 +35,9 @@ Percent difference: **250%** <br>
 ### Fetch API browser compatibility
 
 <h1>
+<a href="https://developer.mozilla.org/es/docs/Web/API/Fetch_API">
 <p align="center"><img src="https://github.com/Hume3/fetch-vs-axios/blob/master/resources/compatibily-table.png" width="800"></p>
+</a>
 </h1>
 
 ### Chromium source code references
