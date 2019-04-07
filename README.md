@@ -72,8 +72,17 @@ Percent difference: **250%** <br>
 </a>
 </h1>
 
+The first query is the most critical, if many customers make a query for the first time, 
+this will generate a big load, all resources will be loaded completely from the server, this is where the miliseconds begin to gain relevance, the longer it takes to resolve a query, more resources of server and client are going to keep busy.
+
+The size of Axios library minimized is of 13.3 KB, is really small, but combined whit others libraries of an project, can be increment the loading and compiling times of an application.
+
+Making an analogy, we could say that three drops of water are nothing inside a glass but with a lot of drops it, he can be filled.
+
 ### Chromium source code references
 
 [Fetch API](https://github.com/chromium/chromium/tree/master/third_party/blink/renderer/core/fetch)
 <br/>
 [XMLHttpRequest object](https://github.com/chromium/chromium/tree/master/third_party/blink/renderer/core/xmlhttprequest)
+
+ 
