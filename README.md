@@ -18,7 +18,7 @@ npm run bench
 <br>
 
 <font color="green">
-    <h1>Fetch pros</h1>
+    <h1>Fetch pros😎 </h1> 
 </font>
 <br>
 
@@ -42,10 +42,10 @@ npm run bench
 <br>
 
 <font color="red">
-    <h1>Fetch cons</h1>
+    <h1>Fetch cons 💩</h1>
 </font>
 
-- Is it's a bit verbose, but u can use a really cool library called [**ky**](https://github.com/sindresorhus/ky)
+- Is it's a bit verbose, but u can use a really cool library called [**ky**](https://github.com/sindresorhus/ky) 🌳
 
 <br>
 
