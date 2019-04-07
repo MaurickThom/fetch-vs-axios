@@ -17,22 +17,33 @@ npm run bench
 ```
 <br>
 
-#### Fetch pros
+<font color="green">
+    <h1>Fetch pros</h1>
+</font>
+<br>
+
 - Is **native**
 - Is **most faster**
 - Is reduces compilation times, like webpack bundles
 - Is reduces javascript VM read times
 - Is modern and the remplace of XMLhttprequest object 
-- Has more control of cache
+- Has more control of browser cache [Cache control](https://hacks.mozilla.org/2016/03/referrer-and-cache-control-apis-for-fetch/)
 - It is not necessary to load it from an external source
 - It consumes less resources of server/client when, solving request in less time
 - No unused Javascript code 
 - Great handling of binary data type array buffers, blobs, etc 
-- Request can be controled by the Controller 
-- You can create and handle, Readable Streams similar to Node.js
+- Request can be aborted by the AbortController [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController/abort) 
+- You can create and handle, Readable Streams similar to Node.js [Using readable streams](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams)
 
-#### Fetch pros
-- Is it's a bit verbose, but u can use a library called [**ky** ](https://github.com/sindresorhus/ky)
+<br>
+
+<font color="red">
+    <h1>Fetch cons</h1>
+</font>
+
+- Is it's a bit verbose, but u can use a library called [**ky**](https://github.com/sindresorhus/ky)
+
+<br>
 
 #### Benchmark demo
 
