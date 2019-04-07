@@ -1,10 +1,5 @@
-<h1> Fetch Native API vs Axios v0.19.0-beta.1 (XMLhttprequest) </h1>
-<img src="https://github.com/Hume3/fetch-vs-axios/blob/master/screenshot.png?raw=true"/>
-
-<br/>
-
-> Benchmarks and code coverage, made in chrome v8
-<br/>
+<img src="https://github.com/Hume3/fetch-vs-axios/blob/master/banner.png?raw=true" style="width=80%;height:auto"/>
+<h1> Fetch Native API vs Axios(XMLhttprequest) </h1>
 
 # Chromium source code references:
 
