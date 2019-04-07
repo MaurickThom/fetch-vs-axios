@@ -26,10 +26,11 @@ npm run bench
 - Is **most faster**
 - Is friendly and easy to lern
 - Is compatible in most of the most used browsers
-- Is reduces compilation times, like webpack bundles
-- Is reduces javascript VM read times
 - Is modern and the remplace of XMLhttprequest object 
+- Reduces javascript VM read and execution times
+- Reduces compilation times, like webpack bundles
 - Has more control of browser cache [Cache control](https://hacks.mozilla.org/2016/03/referrer-and-cache-control-apis-for-fetch/)
+- It is built in low level from scratch
 - It is not necessary to load it from an external source
 - It consumes less resources of server/client when, solving requests in less time
 - No **0%** of unused Javascript, check nyc code coverage 
