@@ -24,14 +24,15 @@ npm run bench
 
 - Is **native**
 - Is **most faster**
+- Is friendly and easy to lern
 - Is compatible in most of the most used browsers
 - Is reduces compilation times, like webpack bundles
 - Is reduces javascript VM read times
 - Is modern and the remplace of XMLhttprequest object 
 - Has more control of browser cache [Cache control](https://hacks.mozilla.org/2016/03/referrer-and-cache-control-apis-for-fetch/)
 - It is not necessary to load it from an external source
-- It consumes less resources of server/client when, solving request in less time
-- No unused Javascript code, 0 code coverage 
+- It consumes less resources of server/client when, solving requests in less time
+- No **0%** of unused Javascript, check nyc code coverage 
 - No extra Javascript code 
 - Great handling of binary data type array buffers, blobs, etc 
 - Request can be aborted by the AbortController [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController/abort) 
