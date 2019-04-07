@@ -1,5 +1,5 @@
 <center>
-<img src="https://github.com/Hume3/fetch-vs-axios/blob/master/banner.png?raw=true" width="400">
+<img src="https://github.com/Hume3/fetch-vs-axios/blob/master/banner.png?raw=true" width="400" align="center">
 </center>
 <br>
 
