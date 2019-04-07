@@ -24,6 +24,7 @@ npm run bench
 
 - Is **native**
 - Is **most faster**
+- Is compatible in most of the most used browsers
 - Is reduces compilation times, like webpack bundles
 - Is reduces javascript VM read times
 - Is modern and the remplace of XMLhttprequest object 
