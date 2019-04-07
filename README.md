@@ -14,6 +14,22 @@ npm install
 ```bash
 npm run bench 
 ```
+<br>
+
+#### Benchmark demo
+
+Cache status: **false** <br>
+Total requests: **1000** <br>
+Resource: **files/image.jpg** <br>
+Content type: **image/jpg** <br>
+Content length: **864069** <br>
+#### Promedy time per request
+Note: The difference increases based on the size of the data transferred <br>
+`Axios` **±35 ms** <br>
+`Fetch` **±10 ms** <br>
+Percent difference: **250%** <br>
+
+<br>
 
 ### Chromium source code references:
 
