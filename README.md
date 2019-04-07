@@ -69,7 +69,7 @@ Percent difference: **250%** <br>
 <p align="center"><img src="https://github.com/Hume3/fetch-vs-axios/blob/master/resources/code-coverage.png" width="800"></p>
 </h1>
 
-21% is generally unused code, since Axios has features that nobody uses hehe.
+24.1% is generally unused code, since Axios has features that nobody uses hehe.
 
 <br>
 
