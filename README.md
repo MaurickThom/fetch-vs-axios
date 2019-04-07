@@ -35,7 +35,7 @@ Percent difference: **250%** <br>
 ### Browser compatibility
 
 <h1>
-<p align="center"><img src="https://github.com/Hume3/fetch-vs-axios/blob/master/resources/compatibily-table.png" width="400"></p>
+<p align="center"><img src="https://github.com/Hume3/fetch-vs-axios/blob/master/resources/compatibily-table.png" width="800"></p>
 </h1>
 
 ### Chromium source code references
