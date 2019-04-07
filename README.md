@@ -32,7 +32,7 @@ Percent difference: **250%** <br>
 
 <br>
 
-### Browser compatibility
+### Fetch API browser compatibility
 
 <h1>
 <p align="center"><img src="https://github.com/Hume3/fetch-vs-axios/blob/master/resources/compatibily-table.png" width="800"></p>
